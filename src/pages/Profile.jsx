@@ -5,6 +5,7 @@ import Loader from "../components/Loader";
 const Profile = () => {
   const { isAuthenticated, user } = useContext(Context);
 
+  if(!isAuthenticated) return (<Loader/>)
   if(isAuthenticated) 
     return (
     <div>
